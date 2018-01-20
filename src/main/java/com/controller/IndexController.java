@@ -5,7 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
  import org.springframework.validation.BindingResult; 
  import org.springframework.web.bind.annotation.ModelAttribute; 
  import org.springframework.web.bind.annotation.RequestMapping; 
- import org.springframework.web.bind.annotation.RequestMethod; 
+ import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.DAO.CategoryDAO;
@@ -64,8 +65,8 @@ import com.model.User;
  			return mv; 
  		} 
  		else{ 
- 			/*user.setRole("ROLE_USER"); 
- 			user.setEnable(true);*/ 
+ 			user.setRole("ROLE_USER"); 
+ 			user.setEnabled(true);
  			userDAO.insertUser(user); 
  			mv.setViewName("index"); 
  			} 
@@ -76,11 +77,11 @@ import com.model.User;
  	public ModelAndView getCustTable(@RequestParam("cid")int cid) 
  	{ 
  		ModelAndView mv=new ModelAndView(); 
- 		mv.addObject("prodList",productDAOImpl.getProdByCatId(cid)); 
+ 		mv.addObject("prodList",ProductDAOImpl.getProdByCatId(cid)); 
  		mv.setViewName("productCustList"); 
  		return mv; 
- 	} */ 
- 	@RequestMapping(value="/goToLogin",method=RequestMethod.GET) 
+ 	} */
+ 	@RequestMapping(value="/goTologin",method=RequestMethod.GET) 
  	public ModelAndView goTOlogin() 
  	{ 
  		ModelAndView mv= new ModelAndView(); 
@@ -92,9 +93,9 @@ import com.model.User;
  		 
  	} 
  	 
- 	@RequestMapping("/userLogged") 
+ 	@RequestMapping("/userlogged") 
        public String login(){ 
- 		return "redirect:/index"; 
+ 		return "redirect:/"; 
  	} 
         
  	 @RequestMapping("/error") 
@@ -102,9 +103,9 @@ import com.model.User;
  	{ 
  		return "error"; 
  	} 
- 	@RequestMapping("/reLogin") 
+ 	@RequestMapping("/relogin") 
  	public String relogin() 
  	{ 
- 		return "redirect:/goToLogin"; 
+ 		return "redirect:/goTologin"; 
  	} 
          } 

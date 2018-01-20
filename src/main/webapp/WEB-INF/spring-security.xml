@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><beans xmlns="http://www.springframework.org/schema/beans"     
      xmlns:mvc="http://www.springframework.org/schema/mvc"   
      xmlns:security="http://www.springframework.org/schema/security"   
-     xmlns:context="http://www.springframework.org/schema/context" 
+     xmlns:context="http://www.springframework.org/schema/context"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://www.springframework.org/schema/beans 
          http://www.springframework.org/schema/beans/spring-beans.xsd 
@@ -18,7 +18,7 @@
  login-processing-url="/j_spring_security_check" 
  username-parameter="username" 
  password-parameter="password" 
- authentication-success-forward-url="/userLogged" 
+ authentication-success-forward-url="/userlogged" 
  authentication-failure-forward-url="/error"/> 
  <security:logout  logout-url="/j_spring_security_logout" 
  invalidate-session="true" logout-success-url="/"/> 

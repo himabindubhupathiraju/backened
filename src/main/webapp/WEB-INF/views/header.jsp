@@ -31,14 +31,14 @@
        <ul class="nav navbar-nav navbar-right"> 
        <c:if test="${pageContext.request.userPrincipal.name==null}"> 
          <li><a href="${pageContext.request.contextPath}/goToregister"><span class="glyphicon glyphicon-user"></span> register</a></li> 
-         <li><a href="${pageContext.request.contextPath}/goToLogin"><span class="glyphicon glyphicon-log-in"></span> login</a></li> 
+         <li><a href="${pageContext.request.contextPath}/goTologin"><span class="glyphicon glyphicon-log-in"></span> login</a></li> 
          </c:if> 
          <c:if test="${pageContext.request.userPrincipal.name !=null}"> 
                  <li><a>Welcome: ${pageContext.request.userPrincipal.name}</a></li> 
                  <li><a href="<c:url value="/j_spring_security_logout"/>">Logout</a></li> 
         </c:if> 
                    
-         <c:if test="${pageContext.request.userPrincipal.name == 'himabinduraju160@gmail.com'}"> 
+         <c:if test="${pageContext.request.userPrincipal.name == 'himabinduraju@gmail.com'}"> 
          <li><a href="${pageContext.request.contextPath}/admin/adding">Admin</a></li> 
           
   <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="${pageContext.request.contextPath}/admin">Admin List<span class="caret"></span></a> 

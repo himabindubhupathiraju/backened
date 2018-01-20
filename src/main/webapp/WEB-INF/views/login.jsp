@@ -33,7 +33,7 @@
              <!-- Collect the nav links, forms, and other content for toggling --> 
              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
                  <ul class="nav navbar-nav"> 
-                     <li><a href="http://localhost:8181/jewelleryfrntend/goToLogin"/>HOME</a></li> 
+                     <li><a href="http://localhost:8181/jewelleryfrntend/goTologin"/>HOME</a></li> 
                      <li><a href="goToregister"><span class="glyphicon glyphicon-user"></span> register</a></li> 
                     
                  </ul> 
@@ -55,11 +55,10 @@
  		</div> 
  	</div> 
  
- 
-60 	<div class="form-group"> 
-61 		<label for="code" class="col-xs-4 control-label">Password</label> 
-62 		<div class="col-xs-4"> 
-63        			<input name="password"  type="password" placeholder="User Password" id="password" class="form-control" /> 
+  	<div class="form-group"> 
+ 		<label for="code" class="col-xs-4 control-label">Password</label> 
+ 		<div class="col-xs-4"> 
+       			<input name="password"  type="password" placeholder="User Password" id="password" class="form-control" /> 
  		</div> 
  	</div> 
               

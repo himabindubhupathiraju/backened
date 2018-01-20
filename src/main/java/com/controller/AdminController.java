@@ -1,18 +1,28 @@
-package com.controller;
+ package com.controller;
 
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.DAOImpl.CategoryDAOImpl;
 import com.DAOImpl.ProductDAOImpl;
 import com.DAOImpl.SupplierDAOImpl;
 import com.model.Category;
+import com.model.Product;
 import com.model.Supplier;
 
 @Controller 
@@ -48,13 +58,13 @@ import com.model.Supplier;
  		mv.setViewName("adding"); 
  		return mv; 
  	} 
- 	/*@RequestMapping(value="/admin/saveCat",method=RequestMethod.POST) 
+ 	@RequestMapping(value="/admin/saveCat",method=RequestMethod.POST) 
  	@Transactional 
  	public ModelAndView saveCatData(@RequestParam("cid") int cid,@RequestParam("cname") String cname) 
  	{ 
  		ModelAndView mv=new ModelAndView(); 
  		Category cc= new Category(); 
- 		cc.setCid(cid);cc.setCname(cname); 
+ 		cc.setCid(cid);cc.setcName(cname); 
  		categoryDAOImpl.insertCategory(cc); 
  		mv.setViewName("adding"); 
  		return mv; 
@@ -204,5 +214,5 @@ import com.model.Supplier;
  			e.printStackTrace();
  		} 
  		return "redirect:/admin/productList?update"; 
- 		 	} */
+ 		 	} 
           }
